@@ -48,6 +48,6 @@
             return getEmPixels;
         });
     } else {
-        this.getEmPixels = getEmPixels;
+        window.getEmPixels = getEmPixels;
     }
 }(document, document.documentElement));
