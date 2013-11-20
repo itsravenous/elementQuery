@@ -64,11 +64,13 @@ elementQuery({"header":{"min-width":["500px","31.250em"],"max-width":["800px"]}}
 * JavaScript
 * Sizzle (http://sizzlejs.com/) or jQuery (http://jquery.com/)
 
+Note: elementQuery can be loaded via requireJS-style AMD. The scripts define named modules called 'getEmPixels' and 'elementQuery'. The elementQuery module explicitly depends upon the getEmPixels module, so you actually only need to require() elementQuery.
+
 ## Size and delivery
 
 Currently, the **master branch** of `elementQuery.js` compresses to around 2367 bytes (~2.3 KB) and the **prod branch** of `elementQuery.js` compresses to around 1788 bytes (~1.7 KB), after minify and gzip.
 
-To minify, you might try these online tools: [Microsoft Ajax Minifier](http://ajaxmin.codeplex.com/), [Uglify](http://marijnhaverbeke.nl/uglifyjs), [Yahoo Compressor](http://refresh-sf.com/yui/), or [Closure Compiler](http://closure-compiler.appspot.com/home). Serve with gzip compression.
+For development, include getEmPixels.js and elementQuery.js. For production, use the combined, minified JS in elementQuery.min.js, or roll your own - you might try these online tools: [Microsoft Ajax Minifier](http://ajaxmin.codeplex.com/), [Uglify](http://marijnhaverbeke.nl/uglifyjs), [Yahoo Compressor](http://refresh-sf.com/yui/), or [Closure Compiler](http://closure-compiler.appspot.com/home). Serve with gzip compression.
 
 ## Support
 
